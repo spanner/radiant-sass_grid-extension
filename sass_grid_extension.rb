@@ -2,22 +2,14 @@
 # require_dependency 'application_controller'
 
 class SassGridExtension < Radiant::Extension
-  version "1.0"
-  description "Describe your extension here"
-  url "http://yourwebsite.com/sass_grid"
-  
-  # define_routes do |map|
-  #   map.namespace :admin, :member => { :remove => :get } do |admin|
-  #     admin.resources :sass_grid
-  #   end
-  # end
+  version "0.1"
+  description "Sassifies the 960 grid system and makes its styles available both as classes and as sass mixins."
+  url "radiant.spanner.org/sass_grid"
   
   def activate
-    # admin.tabs.add "Sass Grid", "/admin/sass_grid", :after => "Layouts", :visibility => [:all]
   end
   
   def deactivate
-    # admin.tabs.remove "Sass Grid"
   end
   
 end

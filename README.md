@@ -1,6 +1,6 @@
 #Sass Grid#
 
-This is a very simple extension that sassifies the [960 grid system](http://960.gs/) and makes its styles available both as classes and as sass mixins.
+This is a very simple extension that sassifies the [960 grid system](http://960.gs/) and makes its styles available both as classes and as sass mixins. Right now it's experimental but it ought to work.
 
 ##Usage##
 
@@ -8,7 +8,7 @@ Put this at the top of a sass file:
 
 	@import 960.sass
 
-And then you can get grid styles in various ways. These are equivalent:
+And then you can get grid styles in various ways. These have the same effect:
 
 In html:
 

@@ -1,6 +1,6 @@
 #Sass Grid#
 
-This is a very simple extension that sassifies the [960 grid system](http://960.gs/) and makes its styles available both as classes and as sass mixins. Right now it's experimental but it ought to work.
+This is a very simple extension that sassifies the [960 grid system](http://960.gs/) and makes its styles available both as classes and as sass mixins. Right now it's experimental but it ought to work. 
 
 ##Usage##
 
@@ -12,11 +12,11 @@ And then you can get grid styles in various ways. These have the same effect:
 
 In html:
 
-	<div id="pagecontent" class="grid_6 prefix_1">...</div>
+	<div id="something" class="grid_6 prefix_1">...</div>
 
 In sass:
 
-	#pagecontent
+	#something
 	  +grid(6)
 	  +prefix(1)
 	
@@ -24,9 +24,15 @@ Depending on which features of the system you use, you may also want your layout
 
 ##Requirements##
 
-Nothing is actually required. If you're running multisited and you want css coming from the database rather than the filesystem, this is compatible with both the `sns_sass_filter` and `sass_filter` extensions but you probably need to change the import line to:
+Nothing is actually required. If you want to use it with SnS you need my [fork of the sns_sass_filter extension](http://github.com/spanner/radiant-sns-sass-filter-extension) to get the include paths right, and you need to set the `SnS.sass_directory` config item to 'stylesheets/sass' (or just move the 960.sass file to somewhere else).
 
-	@import /stylesheets/sass/960.sass
+If you're using paperclipped, the migration included here will define a set of asset sizes like:
+
+* `grid_6` matches the inner box size of a six column div, which is 460px
+* `grid_6_square` is the same but cropped square
+* `grid_6_bg` matches the *outer* box size of a six column div (which is 480px) and is suitable for using as a background where you want contained text to align with the grid.
+
+If you're not using paperclipped, it'll define them anyway.
 
 ##Installation##
 
